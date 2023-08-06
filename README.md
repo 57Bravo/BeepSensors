@@ -50,3 +50,12 @@ then use anything that uses a sound card, IE:
 `espeak "SAY SOMETHING"`
 
 `aplay "some.wav"`
+
+## Using GPS PPS
+
+In `/boot/config.txt`, add:
+
+`dtoverlay=pps-gpio,gpiopin=16`
+
+This will allow you to use gpsd with `/dev/pps0`.
+
