@@ -2,7 +2,11 @@
 
 Integrates UBlox GPS, IMU/MAG, BARO, and buzzer.
 
-** WARNING!!! --- THIS IS AN UNVERIFIED DESIGN!!! --- WARNING!!! **
+REV: - was built and verified on a BeepBerry, however, there are some problems with it:
+* During integration, I blew the TPS61030 boost converter IC. I ordered a couple from Mouser and was able to replace it, fixing the device. I was not able to identify what caused the failure in that IC though.
+* The buzzer isn't very loud, but can be used as a generic audio device. It's kind of neat that you can use espeak to do text to speech on such a small piezo.
+* The GPS antenna doesn't have a large enough ground plane, so 3D fixes break often. It's still usable, just not what you'd expect from a UBlox devkit.
+* GPS acquisition eats the battery, but you can control the GPS reset line to disable it to save power. 
 
 ![media/populated_board.png](media/populated_board.png)
 
